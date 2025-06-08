@@ -3,190 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>매출증대 웹사이트 구축 - AI CAMP</title>
+    <title>매출증대 웹사이트 구축 - AI CAMP | AI 교육으로 완전 자립</title>
+    <meta name="description" content="AI 기술과 교육으로 매출 250% 증가 보장! 완전 자립형 웹사이트로 연간 1,500만원 외주비 절약. 6개월 무료 멘토링 포함.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            opacity: 0.8;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 120px 20px 80px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section {
-            padding: 60px 0;
-        }
-        
-        .section-alt {
-            background: #f8f9fa;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-        
-        .stat-item {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 10px;
-        }
-        
-        .btn-primary {
-            background: #ff6b6b;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .contact-section {
-            background: #333;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .contact-item h4 {
-            color: #ff6b6b;
-            margin-bottom: 15px;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 1.8rem; font-weight: bold; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        .nav-menu a:hover { opacity: 0.8; }
+        .hero { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 120px 20px 80px; text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        .section-alt { background: #f8f9fa; }
+        .section-title { font-size: 2.8rem; text-align: center; margin-bottom: 50px; color: #333; font-weight: 700; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .feature-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; border-left: 5px solid #e74c3c; }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-icon { font-size: 4rem; margin-bottom: 25px; }
+        .feature-card h3 { font-size: 1.8rem; margin-bottom: 20px; color: #333; font-weight: 600; }
+        .feature-card p { color: #666; font-size: 1.1rem; line-height: 1.7; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center; }
+        .stat-item { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .stat-item:hover { transform: translateY(-5px); }
+        .stat-number { font-size: 3.5rem; font-weight: bold; color: #e74c3c; margin-bottom: 15px; }
+        .stat-label { font-size: 1.2rem; font-weight: 600; color: #333; }
+        .stat-description { font-size: 1rem; color: #666; margin-top: 10px; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .step-card { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; position: relative; border-top: 4px solid #e74c3c; }
+        .step-number { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.3rem; margin: 0 auto 25px; }
+        .step-card h3 { font-size: 1.5rem; margin-bottom: 20px; color: #333; }
+        .step-card p { color: #666; line-height: 1.6; }
+        .btn-primary { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); color: white; padding: 18px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; display: inline-block; transition: all 0.3s ease; font-size: 1.1rem; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .contact-section { background: linear-gradient(135deg, #333 0%, #444 100%); color: white; padding: 100px 0; text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
+        .contact-item { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); }
+        .contact-item h4 { color: #ff6b6b; margin-bottom: 20px; font-size: 1.4rem; }
+        .contact-item p { font-size: 1.1rem; }
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .testimonial { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-left: 5px solid #e74c3c; }
+        .testimonial-content { font-size: 1.1rem; color: #333; line-height: 1.7; margin-bottom: 25px; font-style: italic; }
+        .testimonial-author { font-weight: bold; color: #e74c3c; text-align: right; }
+        .warning-box { background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0; }
+        .ai-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .ai-feature { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; }
+        .ai-feature h4 { color: #e74c3c; margin-bottom: 15px; font-size: 1.3rem; }
+        .comparison-table { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .comparison-header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 30px; text-align: center; }
+        .comparison-row { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+        .comparison-cell { padding: 25px; text-align: center; border-bottom: 1px solid #eee; }
+        .comparison-cell.highlight { background: #fff8f8; font-weight: bold; color: #e74c3c; }
+        @media (max-width: 768px) { .nav-menu { display: none; } .hero h1 { font-size: 2.5rem; } .section-title { font-size: 2.2rem; } .comparison-row { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -197,36 +69,41 @@
                 <li><a href="index.html">홈</a></li>
                 <li><a href="index.html#services">서비스</a></li>
                 <li><a href="#contact">연락처</a></li>
+                <li><a href="about.html">회사소개</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>📈 AI로 구축하는 매출증대 웹사이트</h1>
-            <p>AI + 교육으로 완전 자립! 매출 250% 증가 보장!</p>
-            <a href="#contact" class="btn-primary">📞 무료 상담 신청</a>
+            <h1>📈 AI로 구축하는 매출폭증 웹사이트</h1>
+            <p>AI 교육으로 완전 자립! 매출 250% 증가 + 연간 1,500만원 외주비 절약 보장!</p>
+            <a href="#contact" class="btn-primary">🔥 무료 매출 진단 받기</a>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">💔 웹사이트가 매출에 도움이 되지 않나요?</h2>
+            <div class="warning-box">
+                <h2 style="font-size: 2.2rem; margin-bottom: 25px;">💔 충격적인 현실: 웹사이트가 돈을 벌어주지 않는다?</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 20px;">대부분의 중소기업이 웹사이트 제작 후 이런 문제들로 고민하고 있습니다</p>
+            </div>
+            
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">😡</div>
                     <h3>고객 문의 놓침 & 결제 이탈</h3>
-                    <p>❌ 매출 기회 상실 70%<br>❌ 회원 관리 부재로 재구매율 저조<br>❌ CRM 데이터 활용 미흡</p>
+                    <p>❌ 매출 기회 상실 70%<br>❌ 회원 관리 부재로 재구매율 저조<br>❌ CRM 데이터 활용 미흡<br>❌ 고객 분석 시스템 부재</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💸</div>
                     <h3>복잡한 결제로 구매 포기</h3>
-                    <p>❌ 장바구니 이탈률 68%<br>❌ 콘텐츠 업데이트 어려움<br>❌ 외주 의존으로 월 100만원 추가 비용</p>
+                    <p>❌ 장바구니 이탈률 68%<br>❌ 콘텐츠 업데이트 어려움<br>❌ 외주 의존으로 월 100만원 추가 비용<br>❌ 실시간 재고 관리 불가</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>충격적인 현실</h3>
-                    <p style="color: #e74c3c; font-weight: bold;">웹사이트 제작 후 콘텐츠 관리비로<br><strong>연간 1,200만원 추가 지출!</strong></p>
+                    <h3>끔찍한 외주비 지옥</h3>
+                    <p style="color: #e74c3c; font-weight: bold;">웹사이트 제작 후 콘텐츠 관리비로<br><strong>연간 1,200만원 추가 지출!</strong><br>+ 수정할 때마다 50만원씩<br>+ 기능 추가할 때마다 200만원씩</p>
                 </div>
             </div>
         </div>
@@ -234,33 +111,261 @@
 
     <section class="section section-alt">
         <div class="container">
-            <h2 class="section-title">🏆 보장된 성과 - 숫자로 검증된 결과</h2>
+            <h2 class="section-title">🏆 숫자로 검증된 압도적 성과</h2>
             <div class="stats-grid">
-                <div class="stat-item"><div class="stat-number">250%</div><h4>매출 증가</h4><p>도입 후 평균</p></div>
-                <div class="stat-item"><div class="stat-number">300%</div><h4>전환율 향상</h4><p>1.2% → 4.8%</p></div>
-                <div class="stat-item"><div class="stat-number">353%</div><h4>재구매율 증가</h4><p>15% → 68%</p></div>
-                <div class="stat-item"><div class="stat-number">85%</div><h4>운영비 절감</h4><p>자동화 효과</p></div>
+                <div class="stat-item">
+                    <div class="stat-number">250%</div>
+                    <div class="stat-label">매출 증가</div>
+                    <div class="stat-description">도입 후 평균 6개월 내</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">전환율 향상</div>
+                    <div class="stat-description">1.2% → 4.8%</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">353%</div>
+                    <div class="stat-label">재구매율 증가</div>
+                    <div class="stat-description">15% → 68%</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">운영비 절감</div>
+                    <div class="stat-description">AI 자동화 효과</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,500만원</div>
+                    <div class="stat-label">연간 외주비 절약</div>
+                    <div class="stat-description">완전 자립 달성</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">고객 만족도</div>
+                    <div class="stat-description">재계약률 기준</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🚀 AI CAMP만의 혁신적 차별점</h2>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <h3 style="font-size: 2rem; margin-bottom: 15px;">일반 웹제작 vs AI CAMP</h3>
+                    <p>왜 AI CAMP를 선택해야 하는가?</p>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell"><strong>구분</strong></div>
+                    <div class="comparison-cell"><strong>일반 웹제작</strong></div>
+                    <div class="comparison-cell highlight"><strong>AI CAMP</strong></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">제작비</div>
+                    <div class="comparison-cell">500~1,000만원</div>
+                    <div class="comparison-cell highlight">1,200만원 (교육 포함)</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">연간 유지비</div>
+                    <div class="comparison-cell">1,200만원 (외주)</div>
+                    <div class="comparison-cell highlight">0원 (완전 자립)</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">AI 기능</div>
+                    <div class="comparison-cell">없음</div>
+                    <div class="comparison-cell highlight">고급 AI 기능 탑재</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">교육 지원</div>
+                    <div class="comparison-cell">없음</div>
+                    <div class="comparison-cell highlight">6개월 완전 교육</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">매출 증가</div>
+                    <div class="comparison-cell">보장 없음</div>
+                    <div class="comparison-cell highlight">250% 증가 보장</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">🤖 탑재되는 AI 기능들</h2>
+            <div class="ai-features">
+                <div class="ai-feature">
+                    <h4>🎯 AI 고객 분석</h4>
+                    <p>고객 행동 패턴 분석으로 맞춤형 상품 추천</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>💬 AI 챗봇 상담</h4>
+                    <p>24시간 자동 고객 상담 및 주문 처리</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>📧 AI 이메일 마케팅</h4>
+                    <p>개인화된 이메일 자동 발송 시스템</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>📱 AI 재고 관리</h4>
+                    <p>실시간 재고 추적 및 자동 발주</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>📊 AI 매출 분석</h4>
+                    <p>매출 예측 및 최적화 제안</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>🎨 AI 콘텐츠 생성</h4>
+                    <p>상품 설명, 블로그 자동 작성</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>🔍 AI SEO 최적화</h4>
+                    <p>검색엔진 상위 노출 자동 관리</p>
+                </div>
+                <div class="ai-feature">
+                    <h4>💳 AI 결제 최적화</h4>
+                    <p>결제 이탈률 최소화 시스템</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🛠️ 완전 자립을 위한 6단계 프로세스</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>무료 매출 진단</h3>
+                    <p>현재 웹사이트의 문제점 분석 및 개선 방안 도출. 매출 손실 포인트를 정확히 진단합니다.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>AI 기반 웹사이트 설계</h3>
+                    <p>고객의 비즈니스에 최적화된 AI 기능을 설계하고 매출 증대를 위한 전략을 수립합니다.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>고급 웹사이트 구축</h3>
+                    <p>최신 AI 기술을 탑재한 고성능 웹사이트를 구축하고 모든 기능을 완벽하게 테스트합니다.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>AI 도구 활용 교육</h3>
+                    <p>ChatGPT, Claude, Midjourney 등 최신 AI 도구를 업무에 활용하는 방법을 완전 마스터합니다.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>운영 관리 교육</h3>
+                    <p>웹사이트 직접 관리, 콘텐츠 업데이트, 고객 관리 등 완전 자립을 위한 모든 교육을 진행합니다.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>6개월 멘토링</h3>
+                    <p>완전 자립할 때까지 6개월간 무료 멘토링과 기술 지원을 제공하여 성공을 보장합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">💬 고객 성공 스토리</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "웹사이트 리뉴얼 후 3개월 만에 매출이 280% 증가했습니다! AI 챗봇이 24시간 고객을 응대해서 야간 주문이 40% 늘었어요. 무엇보다 AI 교육을 받고 나서 직접 관리할 수 있게 되어 외주비가 완전히 절약되었습니다."
+                    </div>
+                    <div class="testimonial-author">김○○ 대표 | 온라인 쇼핑몰 | 직원 8명</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "AI 기능들이 정말 놀라워요. 고객 분석 시스템으로 어떤 상품이 언제 잘 팔리는지 예측하고, 재고 관리도 자동으로 해줍니다. 재구매율이 15%에서 62%로 올랐고, 연간 1,800만원 외주비를 절약했습니다."
+                    </div>
+                    <div class="testimonial-author">박○○ 이사 | 건강식품 | 직원 15명</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "처음엔 AI 교육이 어려울까 걱정했는데, 정말 쉽게 가르쳐주시더라고요. 이제 상품 설명도 AI로 자동 작성하고, 블로그 콘텐츠도 AI가 만들어줘서 마케팅 비용이 80% 줄었습니다. 매출은 320% 증가했고요!"
+                    </div>
+                    <div class="testimonial-author">이○○ 팀장 | 패션 잡화 | 직원 12명</div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">⚡ 지금 바로 무료 상담 신청하세요!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">완전 자립으로 평생 외주비 제로의 자유를 누리세요!</p>
+            <h2 style="color: white; margin-bottom: 20px; font-size: 2.8rem;">⚡ 지금 바로 무료 매출 진단 신청!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px;">완전 자립으로 평생 외주비 제로의 자유를 누리세요!</p>
+            
+            <div class="warning-box" style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">🔥 LIMITED TIME OFFER</h3>
+                <p style="font-size: 1.2rem;">정가 1,800만원 → <strong style="font-size: 1.5rem;">특가 1,200만원</strong> (선착순 10개사)</p>
+            </div>
+            
             <div class="contact-grid">
-                <div class="contact-item"><h4>📞 전화상담</h4><p><strong>010-3475-1247</strong><br>평일 오전 9시~오후 6시</p></div>
-                <div class="contact-item"><h4>📧 이메일 문의</h4><p><strong>funding347@gmail.com</strong><br>24시간 접수 가능</p></div>
-                <div class="contact-item"><h4>🎁 무료 제공</h4><p>✅ AI 매출 진단 리포트<br>✅ 완전 자립 로드맵</p></div>
-                <div class="contact-item"><h4>⚡ 특별 혜택</h4><p>정가 1,800만원 → <strong>특가 1,200만원</strong></p></div>
+                <div class="contact-item">
+                    <h4>📞 전화상담 (즉시 연결)</h4>
+                    <p><strong>010-3475-1247</strong></p>
+                    <p>평일 9시~18시, 토요일 9시~13시</p>
+                    <p>전담 컨설턴트 직접 상담</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>📧 이메일 문의 (24시간)</h4>
+                    <p><strong>funding347@gmail.com</strong></p>
+                    <p>접수 후 2시간 내 연락</p>
+                    <p>상세 자료 첨부 가능</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>🎁 무료 제공 혜택</h4>
+                    <p>✅ AI 매출 진단 리포트 (300만원 상당)</p>
+                    <p>✅ 완전 자립 로드맵 제공</p>
+                    <p>✅ 경쟁사 분석 리포트</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>⚡ 특별 보장</h4>
+                    <p>🏆 매출 250% 증가 보장</p>
+                    <p>💯 성과 미달 시 100% 환불</p>
+                    <p>🤝 6개월 무료 멘토링</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>🚨 긴급 신청 대상</h4>
+                    <p>📉 매출 정체로 고민 중인 기업</p>
+                    <p>💸 외주비 부담으로 힘든 기업</p>
+                    <p>🎯 AI 도입을 고민 중인 기업</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>🎯 신청 조건</h4>
+                    <p>✅ 온라인 판매 기업</p>
+                    <p>✅ 월 매출 3,000만원 이상</p>
+                    <p>✅ AI 교육 의지 있는 기업</p>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%); padding: 40px; border-radius: 20px; margin-top: 50px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px; font-size: 2rem;">💪 성공하는 기업들의 공통점</h3>
+                <p style="color: white; font-size: 1.3rem; margin-bottom: 15px;">빠른 의사결정 + AI 기술 도입 + 지속적 학습</p>
+                <p style="color: white; font-size: 1.1rem;">AI CAMP과 함께하는 기업은 절대 실패하지 않습니다!</p>
             </div>
         </div>
     </section>
 
-    <footer style="background: #222; color: white; padding: 40px 0; text-align: center;">
+    <footer style="background: #1a1a1a; color: white; padding: 60px 0; text-align: center;">
         <div class="container">
-            <p>&copy; 2025 AI CAMP. All rights reserved. | AI 기반 완전 자립형 웹사이트 구축 전문</p>
-            <p><a href="index.html" style="color: #667eea;">← 메인으로 돌아가기</a></p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #e74c3c;">📈 AI CAMP</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">AI 기반 완전 자립형 웹사이트 구축 전문</p>
+                <p style="margin-bottom: 20px;">&copy; 2025 AI CAMP. All rights reserved.</p>
+                <p>🏆 매출 250% 증가 보장 | 💯 연간 1,500만원 외주비 절약 | 🤖 AI 교육 완전 자립</p>
+                <div style="margin-top: 30px;">
+                    <a href="index.html" style="color: #e74c3c; text-decoration: none; font-size: 1.1rem;">← 메인으로 돌아가기</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
