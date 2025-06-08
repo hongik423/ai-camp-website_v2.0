@@ -14,18 +14,19 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #e8f4e8;
+            background: #1a2f1a;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #2d4a2d;
+            color: #e8f4e8;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
         
         .nav-container {
@@ -40,6 +41,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            color: #7db87d;
         }
         
         .nav-menu {
@@ -49,18 +51,19 @@
         }
         
         .nav-menu a {
-            color: white;
+            color: #e8f4e8;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: color 0.3s;
+            font-weight: 500;
         }
         
         .nav-menu a:hover {
-            opacity: 0.8;
+            color: #7db87d;
         }
         
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #2d4a2d;
+            color: #e8f4e8;
             padding: 120px 20px 80px;
             text-align: center;
         }
@@ -68,13 +71,14 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #e8f4e8;
+            font-weight: 700;
         }
         
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 40px;
-            opacity: 0.9;
+            color: #b8d4b8;
         }
         
         .cta-buttons {
@@ -85,81 +89,92 @@
         }
         
         .btn-primary, .btn-secondary {
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
             border-radius: 25px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
+            font-weight: 600;
+            transition: all 0.3s ease;
             display: inline-block;
+            font-size: 1.1rem;
         }
         
         .btn-primary {
-            background: #ff6b6b;
-            color: white;
+            background: #5a8a5a;
+            color: #e8f4e8;
         }
         
         .btn-secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
+            background: #3a5a3a;
+            color: #e8f4e8;
+            border: 2px solid #5a8a5a;
         }
         
-        .btn-primary:hover, .btn-secondary:hover {
+        .btn-primary:hover {
+            background: #4a7a4a;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: #4a7a4a;
+            transform: translateY(-2px);
         }
         
         .services {
             padding: 80px 20px;
-            background: #f8f9fa;
+            background: #1a2f1a;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #333;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            color: #e8f4e8;
+            font-weight: 700;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
             margin-bottom: 50px;
         }
         
         .service-card {
-            background: white;
+            background: #2d4a2d;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 20px;
             transition: transform 0.3s ease;
             text-align: center;
+            border: 1px solid #3a5a3a;
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            background: #3a5a3a;
         }
         
         .service-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
-            color: #333;
+            color: #e8f4e8;
+            font-weight: 600;
         }
         
         .service-card p {
-            color: #666;
+            color: #b8d4b8;
             margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         .service-features {
@@ -168,57 +183,107 @@
         }
         
         .service-features li {
-            padding: 5px 0;
-            color: #555;
+            padding: 4px 0;
+            color: #d0e8d0;
+            font-size: 0.9rem;
         }
         
         .service-features li:before {
             content: "✅ ";
-            color: #28a745;
+            color: #7db87d;
         }
         
         .btn-service {
-            background: #667eea;
-            color: white;
-            padding: 12px 25px;
+            background: #5a8a5a;
+            color: #e8f4e8;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 20px;
-            transition: background 0.3s;
+            border-radius: 15px;
+            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
         
         .btn-service:hover {
-            background: #5a6fd8;
+            background: #4a7a4a;
+            transform: translateY(-2px);
+        }
+        
+        .stats-section {
+            background: #2d4a2d;
+            padding: 60px 20px;
+            margin: 60px 0;
+            border-radius: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #7db87d;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #e8f4e8;
+            font-weight: 500;
         }
         
         .contact {
-            background: #333;
-            color: white;
+            background: #2d4a2d;
+            color: #e8f4e8;
             padding: 80px 20px;
             text-align: center;
+            border-radius: 30px;
         }
         
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            gap: 30px;
             margin-top: 40px;
         }
         
         .contact-item {
-            padding: 20px;
+            background: #3a5a3a;
+            padding: 25px;
+            border-radius: 20px;
         }
         
         .contact-item h4 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: #ff6b6b;
+            color: #7db87d;
+            font-weight: 600;
+        }
+        
+        .contact-item p {
+            color: #d0e8d0;
+            margin-bottom: 8px;
+        }
+        
+        .contact-item strong {
+            color: #e8f4e8;
+            font-weight: 600;
         }
         
         .footer {
-            background: #222;
-            color: white;
+            background: #1a2f1a;
+            color: #b8d4b8;
             padding: 40px 20px;
             text-align: center;
+            border-top: 1px solid #2d4a2d;
         }
         
         @media (max-width: 768px) {
@@ -230,6 +295,10 @@
                 font-size: 2.5rem;
             }
             
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -237,6 +306,10 @@
             
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -259,7 +332,7 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>🤖 AI로 혁신하는 중소기업</h1>
-            <p>정부지원 100% | 96% 성공률 보장 | 6개 핵심 서비스</p>
+            <p>정부지원 100% | 96% 성공률 보장 | 9개 핵심 서비스</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn-primary">📞 무료 상담 신청</a>
                 <a href="#services" class="btn-secondary">📋 서비스 둘러보기</a>
@@ -270,10 +343,52 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">🔥 AI CAMP 6대 핵심 서비스</h2>
+            <h2 class="section-title">🔥 AI CAMP 9대 핵심 서비스</h2>
             
             <div class="services-grid">
-                <!-- Service 1: 경매활용 공장구매 -->
+                <!-- Service 1: 대표컨설턴트 -->
+                <div class="service-card">
+                    <div class="service-icon">👨‍💼</div>
+                    <h3>대표컨설턴트 전담 서비스</h3>
+                    <p>최고 경영진 전용 1:1 맞춤 컨설팅으로 기업 혁신 완전 주도</p>
+                    <ul class="service-features">
+                        <li>CEO 전용 전략 수립</li>
+                        <li>24시간 직통 상담 라인</li>
+                        <li>경영진 의사결정 지원</li>
+                        <li>월 2회 현장 방문 보장</li>
+                    </ul>
+                    <a href="#contact" class="btn-service">상세보기</a>
+                </div>
+
+                <!-- Service 2: 경정청구 -->
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>경정청구 전문 컨설팅</h3>
+                    <p>세무 전문가와 함께하는 경정청구로 세금 환급 극대화</p>
+                    <ul class="service-features">
+                        <li>평균 2,500만원 환급</li>
+                        <li>90% 경정청구 성공률</li>
+                        <li>5년간 소급 적용 가능</li>
+                        <li>수수료 성과 연동제</li>
+                    </ul>
+                    <a href="#contact" class="btn-service">상세보기</a>
+                </div>
+
+                <!-- Service 3: AI생산성혁신 -->
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>AI생산성혁신 컨설팅</h3>
+                    <p>정부지원 100%로 AI 도입부터 생산성 혁신까지 완전 무료</p>
+                    <ul class="service-features">
+                        <li>정부지원 100% (기업부담금 0원)</li>
+                        <li>생산성 35% 이상 향상</li>
+                        <li>상시근로자 20명 이상 대상</li>
+                        <li>6개월 사후관리 보장</li>
+                    </ul>
+                    <a href="workplace-innovation.html" class="btn-service">상세보기</a>
+                </div>
+
+                <!-- Service 4: 경매활용 공장구매 -->
                 <div class="service-card">
                     <div class="service-icon">🏭</div>
                     <h3>경매활용 공장구매 컨설팅</h3>
@@ -287,7 +402,7 @@
                     <a href="auction-factory-consulting.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 2: ISO/ESG 인증 -->
+                <!-- Service 5: ISO/ESG 인증 -->
                 <div class="service-card">
                     <div class="service-icon">🏆</div>
                     <h3>ISO·ESG 인증 컨설팅</h3>
@@ -301,21 +416,7 @@
                     <a href="iso-esg-certification.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 3: AI 기반 일터혁신 -->
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>AI 기반 일터혁신 컨설팅</h3>
-                    <p>정부지원 100%로 AI 도입부터 생산성 혁신까지 완전 무료</p>
-                    <ul class="service-features">
-                        <li>정부지원 100% (기업부담금 0원)</li>
-                        <li>생산성 35% 이상 향상</li>
-                        <li>상시근로자 20명 이상 대상</li>
-                        <li>6개월 사후관리 보장</li>
-                    </ul>
-                    <a href="workplace-innovation.html" class="btn-service">상세보기</a>
-                </div>
-
-                <!-- Service 4: 기술사업화지원 -->
+                <!-- Service 6: 기술사업화지원 -->
                 <div class="service-card">
                     <div class="service-icon">🚀</div>
                     <h3>기술사업화지원원</h3>
@@ -329,7 +430,7 @@
                     <a href="tech-commercialization.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 5: 정책자금 -->
+                <!-- Service 7: 정책자금 -->
                 <div class="service-card">
                     <div class="service-icon">💰</div>
                     <h3>정책자금 확보 컨설팅</h3>
@@ -343,7 +444,7 @@
                     <a href="policy-funding.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 6: 매출증대 웹사이트 -->
+                <!-- Service 8: 매출증대 웹사이트 -->
                 <div class="service-card">
                     <div class="service-icon">📈</div>
                     <h3>매출증대 웹사이트 구축</h3>
@@ -356,10 +457,55 @@
                     </ul>
                     <a href="sales-website.html" class="btn-service">상세보기</a>
                 </div>
+
+                <!-- Service 9: 통합 컨설팅 패키지 -->
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>통합 컨설팅 패키지</h3>
+                    <p>모든 서비스를 패키지로 제공하여 기업 혁신 완전 솔루션 구현</p>
+                    <ul class="service-features">
+                        <li>8개 서비스 통합 제공</li>
+                        <li>50% 할인 특가</li>
+                        <li>12개월 전담 지원</li>
+                        <li>성과 보장제 운영</li>
+                    </ul>
+                    <a href="#contact" class="btn-service">상세보기</a>
+                </div>
             </div>
 
             <div style="text-align: center; margin-top: 40px;">
                 <a href="#contact" class="btn-primary">🔥 지금 바로 무료 상담 신청</a>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <h3 style="text-align: center; font-size: 2.2rem; color: #e8f4e8; margin-bottom: 40px; font-weight: 700;">🏆 검증된 성과 지표</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">성공 프로젝트</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">96.8%</div>
+                        <div class="stat-label">고객 성공률</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">전담 지원</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">정부지원 활용</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">250%</div>
+                        <div class="stat-label">평균 매출 증가</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">35%</div>
+                        <div class="stat-label">생산성 향상</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -367,37 +513,46 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" style="color: white;">📞 무료 상담 신청</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">AI CAMP 전문 컨설턴트와 1:1 맞춤 상담을 받아보세요</p>
+            <h2 class="section-title" style="color: #e8f4e8;">📞 무료 상담 신청</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #b8d4b8;">AI CAMP 대표컨설턴트와 1:1 맞춤 상담을 받아보세요</p>
             
             <div class="contact-grid">
                 <div class="contact-item">
-                    <h4>🔥 긴급 전화 상담</h4>
+                    <h4>🔥 대표컨설턴트 직통</h4>
                     <p><strong>010-9251-9743</strong></p>
                     <p>평일 09:00~18:00</p>
                     <p>토요일 09:00~15:00</p>
+                    <p>긴급 상담 24시간 가능</p>
                 </div>
                 
                 <div class="contact-item">
                     <h4>📧 이메일 문의</h4>
                     <p><strong>hongik423@gmail.com</strong></p>
-                    <p>24시간 내 답변 보장</p>
+                    <p>2시간 내 답변 보장</p>
                     <p>상세 자료 첨부 가능</p>
+                    <p>맞춤 솔루션 제안서 발송</p>
                 </div>
                 
                 <div class="contact-item">
-                    <h4>📋 특별 혜택</h4>
-                    <p>✅ 무료 기업 진단</p>
-                    <p>✅ 맞춤형 솔루션 제안</p>
-                    <p>✅ 24시간 전담 컨설턴트</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h4>🎯 추가 지원</h4>
+                    <h4>💰 정책자금 전담</h4>
+                    <p><strong>010-3475-1247</strong></p>
                     <p><strong>funding347@gmail.com</strong></p>
-                    <p>정책자금 전용 문의</p>
-                    <p>정부지원사업 안내</p>
+                    <p>정부지원사업 전문</p>
+                    <p>평균 3억원 확보 지원</p>
                 </div>
+                
+                <div class="contact-item">
+                    <h4>🎁 무료 혜택</h4>
+                    <p>✅ 기업 성장단계 진단</p>
+                    <p>✅ 맞춤형 솔루션 제안</p>
+                    <p>✅ 대표컨설턴트 전담 배정</p>
+                    <p>✅ 정부지원 가능성 검토</p>
+                </div>
+            </div>
+            
+            <div style="background: #3a5a3a; padding: 30px; border-radius: 20px; margin-top: 40px; text-align: center;">
+                <h3 style="color: #7db87d; margin-bottom: 15px; font-size: 1.5rem;">⚡ 즉시 연결 보장</h3>
+                <p style="color: #d0e8d0; font-size: 1.1rem;">평균 응답시간 2분 | 당일 상담 가능 | 전국 서비스</p>
             </div>
         </div>
     </section>
@@ -405,9 +560,18 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 AI CAMP. All rights reserved.</p>
-            <p>중소기업 전문 AI 컨설팅 | 정부지원 사업 전문</p>
-            <p>📍 전국 서비스 가능 | 🏆 96% 성공률 보장</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3 style="color: #7db87d; font-size: 1.8rem; margin-bottom: 20px;">🏭 AI CAMP</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 15px; color: #d0e8d0;">대한민국 1위 중소기업 전문 AI 컨설팅</p>
+                <p style="margin-bottom: 20px;">&copy; 2025 AI CAMP. All rights reserved.</p>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <span>🏆 500+ 성공 프로젝트</span>
+                    <span>📞 24/7 전담 지원</span>
+                    <span>💰 100% 정부지원 활용</span>
+                    <span>📍 전국 서비스</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #7db87d;">대표컨설턴트 | 경정청구 | AI생산성혁신 | 경매활용공장구매 | ISO·ESG인증 | 기술사업화 | 정책자금 | 매출증대웹사이트 | 통합패키지</p>
+            </div>
         </div>
     </footer>
 </body>
