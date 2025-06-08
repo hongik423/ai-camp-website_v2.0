@@ -17,23 +17,23 @@
         
         body {
             font-family: 'Noto Sans KR', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #e8e8e8;
             background: #090d0c;
             letter-spacing: -0.01em;
+            font-size: 18px;
         }
 
         /* 이후경 대표 컨설턴트 바 */
         .consultant-bar {
-            background: linear-gradient(135deg, #0b120d 0%, #07140d 100%);
-            color: #e8e8e8;
-            padding: 12px 0;
+            background: #1a237e;
+            color: #ffffff;
+            padding: 16px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1001;
-            border-bottom: 1px solid #1a1a1a;
-            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #3949ab;
         }
 
         .consultant-container {
@@ -48,76 +48,61 @@
         .consultant-info {
             display: flex;
             align-items: center;
-            gap: 15px;
-        }
-
-        .consultant-photo {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 2px solid #3c9e70;
-            background: linear-gradient(135deg, #0b120d 0%, #07140d 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Pretendard', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #3c9e70;
+            gap: 18px;
         }
 
         .consultant-details h4 {
             color: #ffffff;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
         .consultant-details p {
-            color: #b0b0b0;
-            font-size: 0.85rem;
+            color: #c5cae9;
+            font-size: 1.05rem;
             font-weight: 400;
             font-family: 'Pretendard', sans-serif;
         }
 
         .consultant-cta {
             display: flex;
-            gap: 12px;
+            gap: 16px;
             align-items: center;
         }
 
         .btn-consultant {
-            background: #3c9e70;
+            background: #3949ab;
             color: #ffffff;
-            padding: 8px 16px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             font-family: 'Pretendard', sans-serif;
         }
 
         .btn-consultant:hover {
-            background: #2d7a5a;
+            background: #303f9f;
             transform: translateY(-1px);
         }
 
         .consultant-contact {
-            color: #e8e8e8;
+            color: #ffffff;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             font-family: 'Pretendard', sans-serif;
         }
         
         .header {
             background: rgba(11, 18, 13, 0.95);
             color: #e8e8e8;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
-            top: 69px;
+            top: 87px;
             z-index: 1000;
             box-shadow: 0 1px 10px rgba(0,0,0,0.3);
             border-bottom: 1px solid #1a1a1a;
@@ -134,24 +119,24 @@
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #3c9e70;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-family: 'Noto Sans KR', sans-serif;
         }
         
         .logo img {
-            height: 40px;
+            height: 45px;
             width: auto;
         }
         
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 35px;
         }
         
         .nav-menu a {
@@ -160,6 +145,7 @@
             transition: color 0.3s;
             font-weight: 500;
             font-family: 'Pretendard', sans-serif;
+            font-size: 1.1rem;
         }
         
         .nav-menu a:hover {
@@ -169,7 +155,7 @@
         .hero {
             background: linear-gradient(135deg, #0b120d 0%, #07140d 100%);
             color: #ffffff;
-            padding: 200px 20px 80px;
+            padding: 240px 20px 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -187,18 +173,19 @@
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 4.5rem;
+            margin-bottom: 30px;
             color: #ffffff;
             font-weight: 700;
             font-family: 'Noto Sans KR', sans-serif;
             position: relative;
             z-index: 2;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
+            font-size: 1.8rem;
+            margin-bottom: 50px;
             color: #b0b0b0;
             font-family: 'Pretendard', sans-serif;
             position: relative;
@@ -207,7 +194,7 @@
         
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
             position: relative;
@@ -215,13 +202,13 @@
         }
         
         .btn-primary, .btn-secondary {
-            padding: 18px 35px;
+            padding: 22px 40px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-family: 'Pretendard', sans-serif;
         }
         
@@ -249,7 +236,7 @@
         }
         
         .services {
-            padding: 80px 20px;
+            padding: 100px 20px;
             background: #090d0c;
         }
         
@@ -260,23 +247,24 @@
         
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 60px;
+            font-size: 3.5rem;
+            margin-bottom: 80px;
             color: #ffffff;
             font-weight: 700;
             font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.3;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
         
         .service-card {
             background: #0b120d;
-            padding: 30px;
+            padding: 35px;
             border-radius: 12px;
             transition: all 0.3s ease;
             text-align: left;
@@ -310,10 +298,10 @@
         
         .service-image {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             transition: transform 0.3s ease;
         }
         
@@ -322,32 +310,33 @@
         }
         
         .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: #ffffff;
             font-weight: 600;
             font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.4;
         }
         
         .service-card p {
             color: #b0b0b0;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
             line-height: 1.6;
             font-family: 'Pretendard', sans-serif;
         }
         
         .service-features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .service-features li {
-            padding: 4px 0;
+            padding: 6px 0;
             color: #e8e8e8;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             position: relative;
-            padding-left: 20px;
+            padding-left: 25px;
             font-family: 'Pretendard', sans-serif;
         }
         
@@ -357,17 +346,18 @@
             position: absolute;
             left: 0;
             font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .btn-service {
             background: #3c9e70;
             color: #ffffff;
-            padding: 12px 24px;
+            padding: 15px 28px;
             text-decoration: none;
             border-radius: 6px;
             transition: all 0.3s;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             font-family: 'Pretendard', sans-serif;
         }
         
@@ -378,33 +368,33 @@
         
         .stats-section {
             background: #0b120d;
-            padding: 60px 20px;
-            margin: 60px 0;
+            padding: 80px 20px;
+            margin: 80px 0;
             border-radius: 12px;
             border: 1px solid #1a1a1a;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
             text-align: center;
         }
         
         .stat-item {
-            padding: 20px;
+            padding: 25px;
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: 3.8rem;
             font-weight: 700;
             color: #3c9e70;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-family: 'Pretendard', sans-serif;
         }
         
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             color: #e8e8e8;
             font-weight: 500;
             font-family: 'Noto Sans KR', sans-serif;
@@ -413,7 +403,7 @@
         .contact {
             background: #0b120d;
             color: #e8e8e8;
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
             border-radius: 12px;
             border: 1px solid #1a1a1a;
@@ -421,14 +411,14 @@
         
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
         }
         
         .contact-item {
             background: #07140d;
-            padding: 25px;
+            padding: 30px;
             border-radius: 8px;
             border: 1px solid #1a1a1a;
             transition: all 0.3s ease;
@@ -440,8 +430,8 @@
         }
         
         .contact-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
             color: #3c9e70;
             font-weight: 600;
             font-family: 'Noto Sans KR', sans-serif;
@@ -449,68 +439,79 @@
         
         .contact-item p {
             color: #e8e8e8;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-family: 'Pretendard', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         
         .contact-item strong {
             color: #ffffff;
             font-weight: 600;
+            font-size: 1.2rem;
         }
         
         .footer {
             background: #090d0c;
             color: #888888;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-top: 1px solid #1a1a1a;
             font-family: 'Pretendard', sans-serif;
+            font-size: 1.05rem;
         }
         
         @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
             .consultant-container {
                 flex-direction: column;
-                gap: 10px;
-                padding: 8px 20px;
+                gap: 12px;
+                padding: 12px 20px;
             }
 
             .consultant-info {
-                gap: 10px;
-            }
-
-            .consultant-photo {
-                width: 35px;
-                height: 35px;
-                font-size: 0.8rem;
+                gap: 12px;
             }
 
             .consultant-details h4 {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .consultant-details p {
-                font-size: 0.8rem;
+                font-size: 0.95rem;
             }
 
             .consultant-cta {
-                gap: 8px;
+                gap: 12px;
             }
 
             .btn-consultant {
-                padding: 6px 12px;
-                font-size: 0.8rem;
+                padding: 10px 16px;
+                font-size: 0.95rem;
             }
 
             .consultant-contact {
-                font-size: 0.85rem;
+                font-size: 1rem;
             }
 
             .header {
-                top: 89px;
+                top: 103px;
+                padding: 1rem 0;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .nav-menu a {
+                font-size: 1rem;
             }
 
             .hero {
-                padding: 220px 20px 80px;
+                padding: 260px 20px 80px;
             }
             
             .nav-menu {
@@ -518,11 +519,52 @@
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3.2rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                font-size: 1.1rem;
+                padding: 18px 32px;
             }
             
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2.8rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-card p {
+                font-size: 1.05rem;
+            }
+
+            .service-features li {
+                font-size: 1rem;
+            }
+
+            .btn-service {
+                font-size: 1.05rem;
+            }
+
+            .stat-number {
+                font-size: 3.2rem;
+            }
+
+            .stat-label {
+                font-size: 1.2rem;
+            }
+
+            .contact-item h4 {
+                font-size: 1.4rem;
+            }
+
+            .contact-item p {
+                font-size: 1.05rem;
             }
             
             .cta-buttons {
@@ -545,7 +587,6 @@
     <div class="consultant-bar">
         <div class="consultant-container">
             <div class="consultant-info">
-                <div class="consultant-photo">CEO</div>
                 <div class="consultant-details">
                     <h4>이후경 대표컨설턴트</h4>
                     <p>30년+ 실무경험 | AI활용 듀얼브레인 양성 | 고몰입조직 구축 전문</p>
@@ -617,13 +658,13 @@
                         <li>5년간 소급 적용 가능</li>
                         <li>수수료 성과 연동제</li>
                     </ul>
-                    <a href="#contact" class="btn-service">상세보기</a>
+                    <a href="tax-reduction.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 3: AI생산성혁신 -->
+                <!-- Service 3: 일터혁신 컨설팅 -->
                 <div class="service-card">
-                    <img src="images/1AICAMPBM생산성혁신컨설팅.jpg" alt="AI생산성혁신 컨설팅" class="service-image">
-                    <h3>AI생산성혁신 컨설팅</h3>
+                    <img src="images/1AICAMPBM생산성혁신컨설팅.jpg" alt="AI기반 일터혁신 컨설팅" class="service-image">
+                    <h3>AI기반 일터혁신 컨설팅</h3>
                     <p>정부지원 100%로 AI 도입부터 생산성 혁신까지 완전 무료</p>
                     <ul class="service-features">
                         <li>정부지원 100% (기업부담금 0원)</li>
@@ -704,28 +745,28 @@
                     <a href="sales-website.html" class="btn-service">상세보기</a>
                 </div>
 
-                <!-- Service 9: 통합 컨설팅 패키지 -->
+                <!-- Service 9: 기업 맞춤형 컨설팅 -->
                 <div class="service-card">
-                    <img src="images/1646879205431-0.jpg" alt="통합 컨설팅 패키지" class="service-image">
-                    <h3>통합 컨설팅 패키지</h3>
-                    <p>모든 서비스를 패키지로 제공하여 기업 혁신 완전 솔루션 구현</p>
+                    <img src="images/1646879205431-0.jpg" alt="기업 맞춤형 컨설팅" class="service-image">
+                    <h3>기업 맞춤형 컨설팅</h3>
+                    <p>개별 기업의 특성과 니즈에 완벽하게 맞춘 전문 컨설팅 서비스</p>
                     <ul class="service-features">
-                        <li>8개 서비스 통합 제공</li>
-                        <li>50% 할인 특가</li>
-                        <li>12개월 전담 지원</li>
-                        <li>성과 보장제 운영</li>
+                        <li>기업별 맞춤 솔루션 설계</li>
+                        <li>전문가 팀 구성 운영</li>
+                        <li>장기 파트너십 구축</li>
+                        <li>지속적 성장 지원</li>
                     </ul>
                     <a href="#contact" class="btn-service">상세보기</a>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 40px;">
+            <div style="text-align: center; margin-top: 50px;">
                 <a href="#contact" class="btn-primary">지금 바로 무료 상담 신청</a>
             </div>
             
             <!-- Stats Section -->
             <div class="stats-section">
-                <h3 style="text-align: center; font-size: 2.2rem; color: #ffffff; margin-bottom: 40px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif;">검증된 성과 지표</h3>
+                <h3 style="text-align: center; font-size: 2.8rem; color: #ffffff; margin-bottom: 50px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif;">검증된 성과 지표</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">500+</div>
@@ -760,7 +801,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title" style="color: #ffffff;">무료 상담 신청</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #b0b0b0; font-family: 'Pretendard', sans-serif;">AI CAMP 대표컨설턴트와 1:1 맞춤 상담을 받아보세요</p>
+            <p style="font-size: 1.6rem; margin-bottom: 40px; color: #b0b0b0; font-family: 'Pretendard', sans-serif;">AI CAMP 대표컨설턴트와 1:1 맞춤 상담을 받아보세요</p>
             
             <div class="contact-grid">
                 <div class="contact-item">
@@ -796,9 +837,9 @@
                 </div>
             </div>
             
-            <div style="background: #07140d; padding: 30px; border-radius: 8px; margin-top: 40px; text-align: center; border: 1px solid #1a1a1a;">
-                <h3 style="color: #3c9e70; margin-bottom: 15px; font-size: 1.5rem; font-family: 'Noto Sans KR', sans-serif;">즉시 연결 보장</h3>
-                <p style="color: #e8e8e8; font-size: 1.1rem; font-family: 'Pretendard', sans-serif;">평균 응답시간 2분 | 당일 상담 가능 | 전국 서비스</p>
+            <div style="background: #07140d; padding: 40px; border-radius: 8px; margin-top: 50px; text-align: center; border: 1px solid #1a1a1a;">
+                <h3 style="color: #3c9e70; margin-bottom: 20px; font-size: 1.8rem; font-family: 'Noto Sans KR', sans-serif;">즉시 연결 보장</h3>
+                <p style="color: #e8e8e8; font-size: 1.3rem; font-family: 'Pretendard', sans-serif;">평균 응답시간 2분 | 당일 상담 가능 | 전국 서비스</p>
             </div>
         </div>
     </section>
@@ -807,16 +848,16 @@
     <footer class="footer">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto;">
-                <h3 style="color: #3c9e70; font-size: 1.8rem; margin-bottom: 20px; font-family: 'Noto Sans KR', sans-serif;">AI CAMP</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 15px; color: #b0b0b0;">대한민국 1위 중소기업 전문 AI 컨설팅</p>
-                <p style="margin-bottom: 20px;">&copy; 2025 AI CAMP. All rights reserved.</p>
-                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px;">
+                <h3 style="color: #3c9e70; font-size: 2.2rem; margin-bottom: 25px; font-family: 'Noto Sans KR', sans-serif;">AI CAMP</h3>
+                <p style="font-size: 1.3rem; margin-bottom: 20px; color: #b0b0b0;">대한민국 1위 중소기업 전문 AI 컨설팅</p>
+                <p style="margin-bottom: 25px; font-size: 1.1rem;">&copy; 2025 AI CAMP. All rights reserved.</p>
+                <div style="display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; margin-bottom: 25px; font-size: 1.1rem;">
                     <span>500+ 성공 프로젝트</span>
                     <span>24/7 전담 지원</span>
                     <span>100% 정부지원 활용</span>
                     <span>전국 서비스</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #666666;">대표컨설턴트 | 경정청구 | AI생산성혁신 | 경매활용공장구매 | ISO·ESG인증 | 기술사업화 | 정책자금 | 매출증대웹사이트 | 통합패키지</p>
+                <p style="font-size: 1rem; color: #666666;">대표컨설턴트 | 경정청구 | AI기반일터혁신 | 경매활용공장구매 | ISO·ESG인증 | 기술사업화 | 정책자금 | 매출증대웹사이트 | 기업맞춤형컨설팅</p>
             </div>
         </div>
     </footer>

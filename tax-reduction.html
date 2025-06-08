@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 기반 일터혁신 상생컨설팅 - AI CAMP</title>
+    <title>경정청구 전문 컨설팅 - AI CAMP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -286,7 +286,7 @@
         }
 
         .problem-card h4 {
-            color: #ff6b6b;
+            color: #3c9e70;
             font-size: 1.6rem;
             margin-bottom: 15px;
             font-weight: 600;
@@ -308,173 +308,276 @@
 
         .problem-card li:before {
             content: "•";
-            color: #ff6b6b;
+            color: #3c9e70;
             position: absolute;
             left: 0;
             font-weight: bold;
             font-size: 1.2rem;
         }
 
-        /* Performance Table */
-        .performance-table {
+        /* Success Cases */
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .success-card {
             background: #07140d;
+            padding: 25px;
             border-radius: 8px;
-            overflow: hidden;
+            border: 1px solid #1a1a1a;
+            border-left: 4px solid #3c9e70;
+            transition: all 0.3s ease;
+        }
+
+        .success-card:hover {
+            transform: translateY(-3px);
+            border-color: #3c9e70;
+        }
+
+        .success-card .company {
+            color: #3c9e70;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .success-card .amount {
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .success-card .description {
+            color: #b0b0b0;
+            font-size: 1rem;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #07140d;
+            padding: 50px 20px;
+            border-radius: 8px;
             border: 1px solid #1a1a1a;
             margin: 40px 0;
         }
 
-        .performance-table table {
-            width: 100%;
-            border-collapse: collapse;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
         }
 
-        .performance-table th {
-            background: #3c9e70;
-            color: #ffffff;
-            padding: 15px 20px;
-            text-align: center;
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3c9e70;
+            margin-bottom: 10px;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .stat-label {
             font-size: 1.2rem;
-            font-weight: 600;
+            color: #e8e8e8;
+            font-weight: 500;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        .performance-table td {
-            padding: 15px 20px;
-            text-align: center;
+        /* Timeline */
+        .timeline {
+            background: #07140d;
+            padding: 40px 20px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+            margin: 40px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
             border-bottom: 1px solid #1a1a1a;
             color: #e8e8e8;
             font-size: 1.1rem;
             font-family: 'Pretendard', sans-serif;
         }
 
-        .performance-table tr:last-child td {
+        .timeline-item:last-child {
             border-bottom: none;
         }
 
-        .performance-table .highlight {
-            color: #3c9e70;
+        .timeline-year {
             font-weight: 600;
-            font-size: 1.2rem;
+            color: #3c9e70;
+            min-width: 100px;
+            font-family: 'Noto Sans KR', sans-serif;
         }
 
-        /* Process Steps */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        .timeline-warning {
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        /* Checklist */
+        .checklist {
+            background: #07140d;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
             margin: 40px 0;
         }
 
-        .process-step {
+        .checklist h4 {
+            color: #3c9e70;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .checklist-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #090d0c;
+            border-radius: 6px;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            border-color: #3c9e70;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #3c9e70;
+        }
+
+        .checklist-item label {
+            color: #e8e8e8;
+            font-size: 1.1rem;
+            cursor: pointer;
+            flex: 1;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .benefit-item {
             background: #07140d;
             padding: 30px;
             border-radius: 8px;
             border: 1px solid #1a1a1a;
-            text-align: center;
-            position: relative;
             transition: all 0.3s ease;
         }
 
-        .process-step:hover {
+        .benefit-item:hover {
             border-color: #3c9e70;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
-        .step-number {
-            background: #3c9e70;
-            color: #ffffff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            font-family: 'Pretendard', sans-serif;
-        }
-
-        .process-step h4 {
+        .benefit-item h5 {
             color: #3c9e70;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             font-weight: 600;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        .process-step p {
+        .benefit-item p {
             color: #e8e8e8;
             font-size: 1.1rem;
             line-height: 1.6;
             font-family: 'Pretendard', sans-serif;
         }
 
-        /* Success Stories */
-        .testimonial {
+        /* Why Different Section */
+        .why-different {
             background: #07140d;
-            padding: 40px;
+            padding: 50px 20px;
             border-radius: 8px;
-            border-left: 4px solid #3c9e70;
-            margin: 30px 0;
-        }
-
-        .testimonial blockquote {
-            font-size: 1.3rem;
-            color: #e8e8e8;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-style: italic;
-            font-family: 'Pretendard', sans-serif;
-        }
-
-        .testimonial .author {
-            color: #3c9e70;
-            font-size: 1.1rem;
-            font-weight: 600;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        /* Area Table */
-        .area-table {
-            background: #07140d;
-            border-radius: 8px;
-            overflow: hidden;
             border: 1px solid #1a1a1a;
             margin: 40px 0;
         }
 
-        .area-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .area-table th {
-            background: #3c9e70;
-            color: #ffffff;
-            padding: 15px 20px;
+        .why-different h4 {
+            color: #3c9e70;
+            font-size: 2rem;
+            margin-bottom: 30px;
             text-align: center;
-            font-size: 1.2rem;
             font-weight: 600;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        .area-table td {
-            padding: 15px 20px;
-            border-bottom: 1px solid #1a1a1a;
-            color: #e8e8e8;
-            font-size: 1.1rem;
+        .different-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .different-item {
+            background: #090d0c;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+        }
+
+        .different-number {
+            background: #3c9e70;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
             font-family: 'Pretendard', sans-serif;
         }
 
-        .area-table tr:last-child td {
-            border-bottom: none;
+        .different-item h5 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: 'Noto Sans KR', sans-serif;
         }
 
-        .star-rating {
-            color: #ffd700;
-            font-size: 1.2rem;
+        .different-item p {
+            color: #b0b0b0;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-family: 'Pretendard', sans-serif;
         }
 
         /* CTA Section */
@@ -562,32 +665,26 @@
             transform: translateY(-2px);
         }
 
-        /* FAQ Section */
-        .faq-item {
-            background: #07140d;
-            padding: 25px;
+        /* Alert Box */
+        .alert-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff5722 100%);
+            color: #ffffff;
+            padding: 30px;
             border-radius: 8px;
-            border: 1px solid #1a1a1a;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
+            text-align: center;
+            margin: 40px 0;
+            border: 1px solid #ff5722;
         }
 
-        .faq-item:hover {
-            border-color: #3c9e70;
-        }
-
-        .faq-question {
-            color: #3c9e70;
-            font-size: 1.4rem;
-            font-weight: 600;
+        .alert-box h4 {
+            font-size: 1.8rem;
             margin-bottom: 15px;
+            font-weight: 700;
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        .faq-answer {
-            color: #e8e8e8;
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .alert-box p {
+            font-size: 1.2rem;
             font-family: 'Pretendard', sans-serif;
         }
 
@@ -629,7 +726,7 @@
                 font-size: 1.4rem;
             }
 
-            .problem-grid, .process-grid {
+            .problem-grid, .success-grid, .benefits-grid, .different-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -650,12 +747,8 @@
                 align-items: center;
             }
 
-            .performance-table, .area-table {
-                overflow-x: auto;
-            }
-
-            .performance-table table, .area-table table {
-                min-width: 600px;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -698,284 +791,260 @@
         <div class="container">
             <!-- Hero Section -->
             <section class="hero">
-                <h1>AI 기반 일터혁신 상생컨설팅</h1>
-                <div class="subtitle">정부지원 100% | 기업부담금 0원 | 20인 이상 기업 대상</div>
+                <h1>긴급: 50인 이하 중소기업 44%가 놓치고 있는 세금환급</h1>
+                <div class="subtitle">평균 환급액 747만원 | 시효 주의: 5년 지나면 영구 소멸</div>
                 
                 <div class="hero-highlights">
                     <div class="hero-highlight">
-                        <h4>정부지원 100%</h4>
-                        <p>기업부담금 0원으로 완전 무료</p>
+                        <h4>평균 환급액</h4>
+                        <p>747만원</p>
                     </div>
                     <div class="hero-highlight">
-                        <h4>생산성 35% 향상</h4>
-                        <p>평균 3개월 내 가시적 성과</p>
+                        <h4>시효 경고</h4>
+                        <p>2019년분 → 2025년 5월 31일까지만</p>
                     </div>
                     <div class="hero-highlight">
-                        <h4>AI 통합 교육</h4>
-                        <p>ChatGPT, Claude 등 멀티 AI 활용</p>
+                        <h4>환급 성공률</h4>
+                        <p>92%</p>
                     </div>
                     <div class="hero-highlight">
-                        <h4>6개월 사후관리</h4>
-                        <p>완전 정착 및 자립 운영 지원</p>
+                        <h4>처리기간</h4>
+                        <p>평균 60일</p>
                     </div>
                 </div>
             </section>
 
             <!-- Problems Section -->
             <section class="section">
-                <h2 class="section-title">이런 고민으로 밤잠 못 이루고 계신가요?</h2>
+                <h2 class="section-title">이런 고민, 있으신가요?</h2>
+                <div style="background: #07140d; padding: 30px; border-radius: 8px; border: 1px solid #1a1a1a; margin-bottom: 40px; text-align: center;">
+                    <p style="color: #e8e8e8; font-size: 1.2rem; line-height: 1.8; font-family: 'Pretendard', sans-serif;">
+                        "기장 세무사는 세금환급 전문가가 아닙니다"<br>
+                        "120여개 세법 규정을 동시 적용해야 하는 복잡성"<br>
+                        "정부 각 부처 20조원 정책자금, 하지만 몰라서 못받는 현실"<br>
+                        "세무조사 걱정은 NO! 근거없는 소문일 뿐"
+                    </p>
+                </div>
+            </section>
+
+            <!-- Target Companies Section -->
+            <section class="section">
+                <h2 class="section-title">어떤 기업이 대상인가요?</h2>
                 <div class="problem-grid">
                     <div class="problem-card">
-                        <h4>생산성 위기</h4>
+                        <h4>고용증대 기업</h4>
                         <ul>
-                            <li>중소기업 생산성이 대기업의 1/3 수준에 불과</li>
-                            <li>반복업무로 인한 30-40% 생산성 저하</li>
-                            <li>직원들의 업무 몰입도 급감과 높은 이직률</li>
+                            <li>직전 5년간 매년 고용 증가</li>
+                            <li>만29~34세 청년 정규직 채용</li>
+                            <li>고용/산재보험 가입 직원 있음</li>
                         </ul>
+                        <p style="color: #3c9e70; font-weight: 600; margin-top: 15px; font-family: 'Pretendard', sans-serif;">→ 고용증대 세액공제 + 사회보험료 세액공제</p>
                     </div>
+
                     <div class="problem-card">
-                        <h4>인력난 심화</h4>
+                        <h4>법인세/종소세 다납기업</h4>
                         <ul>
-                            <li>전체 중소기업의 54.6%가 현재 인력부족 상태</li>
-                            <li>청년층의 중소기업 기피로 구인난 가속화</li>
-                            <li>대기업 대비 2배 이상 임금격차로 인재 확보 어려움</li>
+                            <li>연매출 10억 이상</li>
+                            <li>법인세/소득세 연 1천만원 이상 납부</li>
+                            <li>R&D, 시설투자 이력</li>
                         </ul>
+                        <p style="color: #3c9e70; font-weight: 600; margin-top: 15px; font-family: 'Pretendard', sans-serif;">→ 연구개발비/투자세액공제 누락 가능성 높음</p>
                     </div>
+
                     <div class="problem-card">
-                        <h4>디지털 격차</h4>
+                        <h4>의료기관</h4>
                         <ul>
-                            <li>AI 도구는 있지만 제대로 활용하지 못함</li>
-                            <li>신기술 도입에서 대기업과의 격차 확대</li>
-                            <li>경쟁사 대비 디지털 역량 뒤처짐</li>
+                            <li>최근 5년 내 신규개원</li>
+                            <li>의료진 채용 증가</li>
+                            <li>의료장비 투자 진행</li>
                         </ul>
+                        <p style="color: #3c9e70; font-weight: 600; margin-top: 15px; font-family: 'Pretendard', sans-serif;">→ 전문직 고용세액공제 + 장비 투자세액공제</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Solution Section -->
+            <!-- Success Cases Section -->
             <section class="section">
-                <h2 class="section-title">정부가 100% 지원하는 AI 기반 솔루션이 있습니다!</h2>
-                <h3 class="section-subtitle">확실한 성과 보장</h3>
-                
-                <div class="performance-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>성과지표</th>
-                                <th>결과</th>
-                                <th>달성기간</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>생산성 향상</td>
-                                <td class="highlight">35% 이상</td>
-                                <td>평균 3개월</td>
-                            </tr>
-                            <tr>
-                                <td>직원 만족도</td>
-                                <td class="highlight">25% 증가</td>
-                                <td>업무 몰입도 향상</td>
-                            </tr>
-                            <tr>
-                                <td>재계약률</td>
-                                <td class="highlight">80% 이상</td>
-                                <td>검증된 만족도</td>
-                            </tr>
-                            <tr>
-                                <td>지속 관리</td>
-                                <td class="highlight">6개월</td>
-                                <td>사후관리 보장</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                <h2 class="section-title">실제 환급 성공사례</h2>
+                <div class="success-grid">
+                    <div class="success-card">
+                        <div class="company">A제조업체 (직원 35명)</div>
+                        <div class="amount">9,600만원 환급</div>
+                        <div class="description">시설투자 및 고용증대 세액공제</div>
+                    </div>
 
-            <!-- Differentiation Section -->
-            <section class="section">
-                <h2 class="section-title">왜 우리 서비스가 특별한가?</h2>
-                <h3 class="section-subtitle">압도적 차별성 3가지</h3>
-                
-                <div class="problem-grid">
-                    <div class="problem-card">
-                        <h4 style="color: #3c9e70;">기업부담금 0원</h4>
-                        <ul>
-                            <li>정부지원 100% (고용노동부 + 노사발전재단)</li>
-                            <li>컨설팅비 무료 (통상 3,000만원 → 0원)</li>
-                            <li>조건: 상시근로자 20명 이상 기업만</li>
-                        </ul>
+                    <div class="success-card">
+                        <div class="company">B병원 (의사 8명)</div>
+                        <div class="amount">5,850만원 환급</div>
+                        <div class="description">전문인력 고용 및 장비투자 공제</div>
                     </div>
-                    <div class="problem-card">
-                        <h4 style="color: #3c9e70;">AI 교육 통합 제공</h4>
-                        <ul>
-                            <li>Claude, ChatGPT, Gemini, Cursor 멀티 AI 활용 교육</li>
-                            <li>업무 자동화 시스템 실제 구축</li>
-                            <li>중소기업 특화 실무 중심 맞춤 교육</li>
-                        </ul>
+
+                    <div class="success-card">
+                        <div class="company">C IT기업 (청년직원 25명)</div>
+                        <div class="amount">1억 240만원 환급</div>
+                        <div class="description">R&D 세액공제 및 청년고용 공제</div>
                     </div>
-                    <div class="problem-card">
-                        <h4 style="color: #3c9e70;">직접 운영 가능한 시스템</h4>
-                        <ul>
-                            <li>교육 후 자체 운영 및 업데이트 가능</li>
-                            <li>외부 의존성 제거로 지속적 혁신 가능</li>
-                            <li>6개월 사후관리로 완전 정착 지원</li>
-                        </ul>
+
+                    <div class="success-card">
+                        <div class="company">D제조업 (직원 155명)</div>
+                        <div class="amount">3억 1,500만원 환급</div>
+                        <div class="description">종합적 세액공제 최적화</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Process Section -->
+            <!-- Statistics Section -->
             <section class="section">
-                <h2 class="section-title">AI CAMP 혁신 4단계 프로세스</h2>
-                
-                <div class="process-grid">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4>진단 (Diagnosis)</h4>
-                        <p>AI 역량 현황 정밀 분석<br>업무 프로세스 진단 및 개선점 도출<br>ROI 예측 시뮬레이션 제공<br><strong>무료 제공</strong></p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4>제안 (Proposal)</h4>
-                        <p>맞춤형 AI 도입 로드맵 설계<br>도구별 활용 전략 수립<br>투자 대비 효과 명확한 제시</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4>교육 (Education)</h4>
-                        <p>실무진 AI 활용 심화 교육<br>직무별 맞춤 커리큘럼 제공<br>실습 중심 워크샵 진행</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h4>구축 (Implementation)</h4>
-                        <p>업무 자동화 시스템 구축<br>6개월 지속 사후관리<br>성과 측정 및 지속 개선</p>
+                <h2 class="section-title">통계로 보는 환급 가능성</h2>
+                <div class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">92%</div>
+                            <div class="stat-label">환급 성공률</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">60일</div>
+                            <div class="stat-label">평균 처리기간</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">89%</div>
+                            <div class="stat-label">고객 재계약률</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">747만원</div>
+                            <div class="stat-label">평균 환급액</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Success Stories Section -->
+            <!-- Deadline Warning Section -->
             <section class="section">
-                <h2 class="section-title">성공 사례 & 고객 증언</h2>
-                
-                <div class="testimonial">
-                    <blockquote>"3개월 만에 생산성 40% 향상!"</blockquote>
-                    <div class="author">김○○ 대표 | 제조업 | 직원 45명</div>
-                    <p style="color: #b0b0b0; margin-top: 10px; font-style: italic;">"AI 도구 도입 후 품질관리 업무가 자동화되면서 직원들이 더 가치있는 업무에 집중할 수 있게 되었습니다. 무엇보다 교육 후 우리가 직접 운영할 수 있어서 지속적으로 발전시킬 수 있습니다."</p>
+                <h2 class="section-title">마지막 기회! 놓치면 영구 소멸</h2>
+                <div class="alert-box">
+                    <h4>놓친 환급금 1,434억원 (국세청 발표)</h4>
+                    <p>지금 신청하지 않으면 영원히 받을 수 없습니다!</p>
                 </div>
-
-                <div class="testimonial">
-                    <blockquote>"이직률 50% 감소, 직원 만족도 최고!"</blockquote>
-                    <div class="author">박○○ 인사팀장 | 서비스업 | 직원 67명</div>
-                    <p style="color: #b0b0b0; margin-top: 10px; font-style: italic;">"반복적인 고객 응대 업무가 AI 챗봇으로 자동화되면서 직원들의 업무 스트레스가 크게 줄었습니다. 정부 지원으로 무료였는데 이런 효과까지 얻을 줄 몰랐습니다."</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2019년분</span>
+                        <span>→ 2025년 5월 31일까지만</span>
+                        <span class="timeline-warning">(6개월 남음)</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2020년분</span>
+                        <span>→ 2026년 5월 31일</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2021년분</span>
+                        <span>→ 2027년 5월 31일</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2022년분</span>
+                        <span>→ 2028년 5월 31일</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023년분</span>
+                        <span>→ 2029년 5월 31일</span>
+                    </div>
                 </div>
             </section>
 
-            <!-- Areas Section -->
+            <!-- Quick Diagnosis Section -->
             <section class="section">
-                <h2 class="section-title">9개 핵심 영역 중 선택 가능</h2>
-                
-                <div class="area-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>영역</th>
-                                <th>주요 내용</th>
-                                <th>AI 활용도</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>근로시간 혁신</td>
-                                <td>스마트 근무체계 + AI 스케줄링</td>
-                                <td><span class="star-rating">★★★★☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>임금체계 개선</td>
-                                <td>데이터 기반 공정 보상체계</td>
-                                <td><span class="star-rating">★★★☆☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>근로자 참여협력</td>
-                                <td>AI 기반 소통 플랫폼 구축</td>
-                                <td><span class="star-rating">★★★★★</span></td>
-                            </tr>
-                            <tr>
-                                <td>직장문화 개선</td>
-                                <td>디지털 문화혁신 시스템</td>
-                                <td><span class="star-rating">★★★★☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>직무역량 강화</td>
-                                <td>AI 맞춤형 학습 플랫폼</td>
-                                <td><span class="star-rating">★★★★★</span></td>
-                            </tr>
-                            <tr>
-                                <td>조직관리 고도화</td>
-                                <td>AI 성과관리 시스템</td>
-                                <td><span class="star-rating">★★★★☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>차별개선/상생</td>
-                                <td>데이터 기반 공정성 진단</td>
-                                <td><span class="star-rating">★★★☆☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>공정채용</td>
-                                <td>AI 면접 및 평가 시스템</td>
-                                <td><span class="star-rating">★★★★☆</span></td>
-                            </tr>
-                            <tr>
-                                <td>장년친화</td>
-                                <td>세대통합 디지털 교육</td>
-                                <td><span class="star-rating">★★★☆☆</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2 class="section-title">30초 무료 간이 진단</h2>
+                <div class="checklist">
+                    <h4>하나라도 체크되면 환급 가능성 높습니다!</h4>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">최근 5년간 세금 납부 경험 있음</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check2">
+                            <label for="check2">직원 수 증가 또는 청년직원 채용 있음</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check3">
+                            <label for="check3">R&D, 시설투자, 교육비 지출 이력 있음</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check4">
+                            <label for="check4">연말정산에서 누락된 항목이 있을 것 같음</label>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- FAQ Section -->
+            <!-- Special Benefits Section -->
             <section class="section">
-                <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q1. 정말 기업부담금이 0원인가요?</div>
-                    <div class="faq-answer">네, 맞습니다. 고용노동부와 노사발전재단에서 100% 지원하는 정부사업으로, 상시근로자 20명 이상 기업은 무료로 참여 가능합니다.</div>
-                </div>
+                <h2 class="section-title">지금 전화하면 드리는 특별 혜택</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h5>무료 정밀진단</h5>
+                        <p>30분 상담 (평소 50만원)<br>환급 가능 예상액 즉시 산출</p>
+                    </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">Q2. 어떤 AI 도구를 배우나요?</div>
-                    <div class="faq-answer">Claude, ChatGPT, Gemini, Cursor 등 실무에 바로 활용 가능한 최신 AI 도구들을 기업 업무에 맞춰 교육합니다.</div>
-                </div>
+                    <div class="benefit-item">
+                        <h5>성공 시에만 수수료</h5>
+                        <p>성공 시 30% 수수료<br>실패 시 0원</p>
+                    </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">Q3. 컨설팅 기간은 얼마나 되나요?</div>
-                    <div class="faq-answer">진단 2주 + 교육·구축 10-15주 + 사후관리 6개월로 총 약 10개월간 지원됩니다.</div>
-                </div>
+                    <div class="benefit-item">
+                        <h5>세무조사 보험</h5>
+                        <p>전 과정 무료 제공<br>세무 전문가 동행</p>
+                    </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">Q4. 교육 후 자체 운영이 가능한가요?</div>
-                    <div class="faq-answer">네, 교육과정에서 자체 운영을 위한 매뉴얼과 시스템을 구축해드리며, 6개월 사후관리를 통해 완전한 자립을 지원합니다.</div>
+                    <div class="benefit-item">
+                        <h5>24시간 상담</h5>
+                        <p>언제든지 상담 가능<br>즉시 연결 보장</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="faq-item">
-                    <div class="faq-question">Q5. 성과가 보장되나요?</div>
-                    <div class="faq-answer">평균 35% 생산성 향상, 25% 직원 만족도 증가 등 검증된 성과가 있으며, 80% 이상의 재계약률을 보이고 있습니다.</div>
+            <!-- Why Different Section -->
+            <section class="section">
+                <div class="why-different">
+                    <h4>우리가 다른 이유</h4>
+                    <div class="different-grid">
+                        <div class="different-item">
+                            <div class="different-number">1</div>
+                            <h5>경정청구 전문팀 운영</h5>
+                            <p>세무사 + 노무사 + 정책자금 전문가 협업<br>120여개 세법 규정 동시 적용 시스템</p>
+                        </div>
+
+                        <div class="different-item">
+                            <div class="different-number">2</div>
+                            <h5>No Cure, No Pay</h5>
+                            <p>환급 실패 시 비용 0원<br>투명한 수수료 성공 시에만 30%</p>
+                        </div>
+
+                        <div class="different-item">
+                            <div class="different-number">3</div>
+                            <h5>세무조사 보험 포함</h5>
+                            <p>조사 걱정 ZERO<br>모든 과정 세무 전문가 동행</p>
+                        </div>
+
+                        <div class="different-item">
+                            <div class="different-number">4</div>
+                            <h5>5년치 통합 검토 시스템</h5>
+                            <p>2019~2023년 한 번에 정밀 검토<br>누락 항목 완벽 발굴</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Final CTA Section -->
             <section class="cta-section">
-                <h3>선착순 50개 기업만!</h3>
-                <p>지금 당장 무료 상담을 신청하세요</p>
+                <h3>놓치면 영구 소멸! 평균 747만원 세금환급</h3>
+                <p>50인 이하 중소기업 44%가 모르는 정부 보장 혜택<br>지금 무료 진단받고 정당한 권리 되찾기!</p>
                 <div class="cta-buttons">
-                    <a href="tel:010-3475-1247" class="btn-primary">긴급 전화 상담</a>
-                    <a href="mailto:funding347@gmail.com" class="btn-secondary">이메일 문의</a>
+                    <a href="tel:010-9251-9743" class="btn-primary">즉시 전화 상담</a>
+                    <a href="mailto:hongik423@gmail.com" class="btn-secondary">이메일 문의</a>
                 </div>
                 <div style="margin-top: 30px;">
-                    <p style="font-size: 1.2rem; color: #e8e8e8;">신청 후 1주일 내 무료 진단 시작</p>
-                    <p style="font-size: 1.2rem; color: #e8e8e8;">3개월 내 확실한 성과 보장</p>
-                    <p style="font-size: 1.2rem; color: #e8e8e8;">6개월 완전 정착 및 자립 운영</p>
+                    <p style="font-size: 1.2rem; color: #e8e8e8; font-family: 'Pretendard', sans-serif;">24시간 상담 가능 | 당일 진단 가능 | 전국 서비스</p>
                 </div>
             </section>
         </div>
@@ -994,7 +1063,7 @@
                     <span>100% 정부지원 활용</span>
                     <span>전국 서비스</span>
                 </div>
-                <p style="font-size: 1rem; color: #666666;">AI 기반 일터혁신 상생컨설팅 | 정부지원 100% | 기업부담금 0원 | 상시근로자 20명 이상</p>
+                <p style="font-size: 1rem; color: #666666;">경정청구 전문 컨설팅 | 평균 747만원 환급 | 성공률 92% | No Cure, No Pay</p>
             </div>
         </div>
     </footer>
