@@ -42,6 +42,14 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #7db87d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
         }
         
         .nav-menu {
@@ -146,21 +154,48 @@
         
         .service-card {
             background: #2d4a2d;
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             text-align: center;
             border: 1px solid #3a5a3a;
+            overflow: hidden;
+            position: relative;
         }
         
         .service-card:hover {
             transform: translateY(-8px);
             background: #3a5a3a;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.05);
         }
         
         .service-icon {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(45, 74, 45, 0.9);
+            padding: 8px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .service-card h3 {
@@ -318,7 +353,10 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">🏭 AI CAMP</div>
+            <div class="logo">
+                <img src="images/AICAMP로고.png" alt="AI CAMP 로고">
+                🏭 AI CAMP
+            </div>
             <ul class="nav-menu">
                 <li><a href="#home">홈</a></li>
                 <li><a href="#services">서비스</a></li>
@@ -348,6 +386,7 @@
             <div class="services-grid">
                 <!-- Service 1: 대표컨설턴트 -->
                 <div class="service-card">
+                    <img src="images/AICAMP로고.png" alt="대표컨설턴트 전담 서비스" class="service-image">
                     <div class="service-icon">👨‍💼</div>
                     <h3>대표컨설턴트 전담 서비스</h3>
                     <p>최고 경영진 전용 1:1 맞춤 컨설팅으로 기업 혁신 완전 주도</p>
@@ -362,6 +401,7 @@
 
                 <!-- Service 2: 경정청구 -->
                 <div class="service-card">
+                    <img src="images/경정청구.jpg" alt="경정청구 전문 컨설팅" class="service-image">
                     <div class="service-icon">📋</div>
                     <h3>경정청구 전문 컨설팅</h3>
                     <p>세무 전문가와 함께하는 경정청구로 세금 환급 극대화</p>
@@ -376,6 +416,7 @@
 
                 <!-- Service 3: AI생산성혁신 -->
                 <div class="service-card">
+                    <img src="images/1AICAMPBM생산성혁신컨설팅.jpg" alt="AI생산성혁신 컨설팅" class="service-image">
                     <div class="service-icon">⚡</div>
                     <h3>AI생산성혁신 컨설팅</h3>
                     <p>정부지원 100%로 AI 도입부터 생산성 혁신까지 완전 무료</p>
@@ -390,6 +431,7 @@
 
                 <!-- Service 4: 경매활용 공장구매 -->
                 <div class="service-card">
+                    <img src="images/3경매공장구매.png" alt="경매활용 공장구매 컨설팅" class="service-image">
                     <div class="service-icon">🏭</div>
                     <h3>경매활용 공장구매 컨설팅</h3>
                     <p>공장입지분석부터 투자사업타당성 검토까지 완벽한 경매 투자 솔루션</p>
@@ -404,6 +446,7 @@
 
                 <!-- Service 5: ISO/ESG 인증 -->
                 <div class="service-card">
+                    <img src="images/ISO·ESG인증.png" alt="ISO·ESG 인증 컨설팅" class="service-image">
                     <div class="service-icon">🏆</div>
                     <h3>ISO·ESG 인증 컨설팅</h3>
                     <p>글로벌 경쟁력 확보를 위한 ISO 및 ESG 인증 전문 컨설팅</p>
@@ -418,6 +461,7 @@
 
                 <!-- Service 6: 기술사업화지원 -->
                 <div class="service-card">
+                    <img src="images/ChatGPT Image 2025년 6월 5일 오후 09_44_19.png" alt="기술사업화지원원" class="service-image">
                     <div class="service-icon">🚀</div>
                     <h3>기술사업화지원원</h3>
                     <p>성장 단계별 최적화된 기술경영 솔루션으로 창업부터 글로벌 기업까지</p>
@@ -432,6 +476,7 @@
 
                 <!-- Service 7: 정책자금 -->
                 <div class="service-card">
+                    <img src="images/2정책자금.png" alt="정책자금 확보 컨설팅" class="service-image">
                     <div class="service-icon">💰</div>
                     <h3>정책자금 확보 컨설팅</h3>
                     <p>사업전환·구조개선 자금 확보를 위한 전문 컨설팅</p>
@@ -446,6 +491,7 @@
 
                 <!-- Service 8: 매출증대 웹사이트 -->
                 <div class="service-card">
+                    <img src="images/4매출증대웹사이트.jpg" alt="매출증대 웹사이트 구축" class="service-image">
                     <div class="service-icon">📈</div>
                     <h3>매출증대 웹사이트 구축</h3>
                     <p>AI 기술과 교육으로 매출 250% 증가 및 완전 자립 지원</p>
@@ -460,6 +506,7 @@
 
                 <!-- Service 9: 통합 컨설팅 패키지 -->
                 <div class="service-card">
+                    <img src="images/1646879205431-0.jpg" alt="통합 컨설팅 패키지" class="service-image">
                     <div class="service-icon">🎯</div>
                     <h3>통합 컨설팅 패키지</h3>
                     <p>모든 서비스를 패키지로 제공하여 기업 혁신 완전 솔루션 구현</p>
