@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정책자금 확보 컨설팅 - AI CAMP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-alt {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            background: #ffc107;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .contact-section {
+            background: #333;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #ffc107;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #ffc107;
+            margin-top: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .funding-info {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .website-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .website-card a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .website-card a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="color: white; text-decoration: none;">🏭 AI CAMP</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html#services">서비스</a></li>
+                <li><a href="#contact">연락처</a></li>
+                <li><a href="about.html">회사소개</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>💰 정책자금 확보 컨설팅</h1>
+            <p>사업전환·구조개선으로 위기를 기회로 바꾸는 확실한 방법</p>
+            <a href="#contact" class="btn-primary">📞 무료 상담 신청</a>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🚨 사업전환·구조개선 자금이 필요하신가요?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📉</div>
+                    <h3>사업구조 전환 압박</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>기존 사업의 한계로 새로운 사업 전환 필요</li>
+                        <li>구조개선 비용 부담으로 경영난 가중</li>
+                        <li>고금리로 인한 이자 부담 매월 증가</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>구조개선 비용 부담</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>시설 현대화에 수십억원 필요</li>
+                        <li>인력 구조조정과 재교육 비용 부담</li>
+                        <li>디지털 전환 투자 시급하지만 자금 부족</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>정책자금 정보 부족</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>어떤 정책자금이 우리 상황에 맞는지 모름</li>
+                        <li>신청서 작성이 복잡해서 포기</li>
+                        <li>낮은 선정률로 반복 탈락의 악순환</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Info Section -->
+    <section class="funding-info">
+        <div class="container">
+            <h2 style="margin-bottom: 30px;">💡 2025년 역대 최대 26.5조원 풀렸습니다!</h2>
+            <div class="stats-grid">
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div class="stat-number" style="color: white;">26.5조원</div>
+                    <h4>총 정책자금 규모</h4>
+                    <p>역대 최대 편성</p>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div class="stat-number" style="color: white;">4.5조원</div>
+                    <h4>중소기업 정책자금</h4>
+                    <p>전년 대비 증가</p>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div class="stat-number" style="color: white;">100억원</div>
+                    <h4>사업전환자금</h4>
+                    <p>연간 지원 한도</p>
+                </div>
+                <div class="stat-item" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div class="stat-number" style="color: white;">60억원</div>
+                    <h4>기업당 융자한도</h4>
+                    <p>최대 지원 가능</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">✅ AI CAMP이 해결해 드립니다!</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>사업전환자금 전문 컨설팅</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 중소벤처기업부 사업전환계획 승인 절차</li>
+                        <li>✅ 승인일로부터 5년간 지속 지원 자격</li>
+                        <li>✅ 연간 100억원 한도 내 단계별 자금 조달</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>구조개선자금 확보</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 신성장기반자금 (창업 7년 이상 기업)</li>
+                        <li>✅ 재도약지원자금 (사업전환·재창업)</li>
+                        <li>✅ 긴급경영안정자금 (일시적 경영애로)</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>100+ 정책자금 DB 매칭</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 중소벤처기업진흥공단 정책자금</li>
+                        <li>✅ 소상공인시장진흥공단 자금</li>
+                        <li>✅ 신용보증기금·기술보증기금 연계</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>전문가 신청서 작성</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 85% 선정률의 비밀</li>
+                        <li>✅ 정책우선도 평가 완벽 대응</li>
+                        <li>✅ 고용창출·기술혁신 스토리텔링</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🏆 AI CAMP 차별화된 성과</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <h4>선정 성공률</h4>
+                    <p>업계 평균 대비 3배</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3억원</div>
+                    <h4>평균 확보 금액</h4>
+                    <p>기업당 연평균</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <h4>성공 사례</h4>
+                    <p>누적 지원 기업 수</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30일</div>
+                    <h4>평균 처리기간</h4>
+                    <p>빠른 결과 도출</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">🔥 AI CAMP 4단계 확실한 프로세스</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>기업 현황 정밀 분석</h3>
+                    <p><strong>1주</strong></p>
+                    <ul style="text-align: left; color: #666;">
+                        <li>재무상태 및 사업현황 종합 분석</li>
+                        <li>자금 니즈 파악 및 우선순위 설정</li>
+                        <li>100+ 정책자금 중 최적 매칭</li>
+                        <li>예상 선정 확률 및 금액 시뮬레이션</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>최적 정책자금 매칭</h3>
+                    <p><strong>1주</strong></p>
+                    <ul style="text-align: left; color: #666;">
+                        <li>사업전환자금 vs 구조개선자금 최적 선택</li>
+                        <li>신청 전략 수립 및 일정 관리</li>
+                        <li>준비 서류 체크리스트 제공</li>
+                        <li>선정 가능성 높은 순서대로 우선순위 배치</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>전문가 신청서 작성</h3>
+                    <p><strong>2주</strong></p>
+                    <ul style="text-align: left; color: #666;">
+                        <li>정책우선도 평가 맞춤 작성</li>
+                        <li>고용창출·기술혁신 근거 자료 구성</li>
+                        <li>사업계획서 전문가 검토 및 수정</li>
+                        <li>제출 및 진행 관리 전문 컨설팅</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>선정 후 사후관리</h3>
+                    <p><strong>6개월</strong></p>
+                    <ul style="text-align: left; color: #666;">
+                        <li>선정 후 실행 지원 및 모니터링</li>
+                        <li>정산 및 보고서 관리 컨설팅</li>
+                        <li>차년도 연계 지원 발굴</li>
+                        <li>추가 자금 확보 기회 안내</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">💬 실제 고객 생생 후기</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"3개월 만에 5억원 확보, 사업전환 성공했습니다. 기존 일반 운송업에서 스마트 물류로 전환, 수익성 40% 개선되었습니다."</p>
+                    <div class="testimonial-author">김○○ 대표 | 물류 서비스업 | 직원 80명</div>
+                </div>
+                <div class="testimonial">
+                    <p>"AI CAMP 덕분에 85% 선정률의 기적을 경험했어요. 3번 연속 탈락 후 AI CAMP 통해 첫 신청으로 8억원 확보했습니다."</p>
+                    <div class="testimonial-author">박○○ 이사 | 정밀부품 제조업 | 직원 120명</div>
+                </div>
+                <div class="testimonial">
+                    <p>"복잡한 절차를 완전 컨설팅해줘서 정말 편했습니다. 신청부터 선정까지 30일 만에 완료, 매출 25% 증가했습니다."</p>
+                    <div class="testimonial-author">이○○ 부장 | 의류 제조업 | 직원 60명</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Websites Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">🌐 편리한 정책자금 사이트 한눈에 보기</h2>
+            <h3 style="text-align: center; margin-bottom: 30px;">🏛️ 정부 기관</h3>
+            <div class="websites-grid">
+                <div class="website-card">
+                    <h4><a href="https://www.mss.go.kr" target="_blank">중소벤처기업부</a></h4>
+                    <p>정책자금 총괄</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://www.bizinfo.go.kr" target="_blank">기업마당(Bizinfo)</a></h4>
+                    <p>통합 지원사업 정보</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://www.smes.go.kr" target="_blank">중소벤처24</a></h4>
+                    <p>원스톱 민원서비스</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://www.k-startup.go.kr" target="_blank">K-Startup</a></h4>
+                    <p>창업지원포털</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 40px 0 30px;">🏢 수행기관</h3>
+            <div class="websites-grid">
+                <div class="website-card">
+                    <h4><a href="https://www.kosmes.or.kr" target="_blank">중소벤처기업진흥공단</a></h4>
+                    <p>중소기업 정책자금</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://ols.semas.or.kr" target="_blank">소상공인시장진흥공단</a></h4>
+                    <p>소상공인 정책자금</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://www.kodit.co.kr" target="_blank">신용보증기금</a></h4>
+                    <p>신용보증 연계</p>
+                </div>
+                <div class="website-card">
+                    <h4><a href="https://www.kibo.or.kr" target="_blank">기술보증기금</a></h4>
+                    <p>기술평가 연계</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">⚠️ 마지막 경고: 지금 놓치면 1년 더 기다려야 합니다</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">정책자금 신청 타이밍을 놓치면 다음 모집까지 6개월~1년 대기</p>
+            <a href="#contact" class="btn-primary" style="background: white; color: #dc3545;">지금 바로 무료 상담 신청</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">📲 1분 만에 무료 상담 신청</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">LIMITED TIME 혜택 마감 임박! (선착순 30개사)</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📞 긴급 전화 상담</h4>
+                    <p><strong>010-3475-1247</strong></p>
+                    <p>평일 9시~20시, 토요일 9시~15시</p>
+                    <p>정책자금 전문가 직통 연결</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>✉️ 이메일 상담</h4>
+                    <p><strong>funding347@gmail.com</strong></p>
+                    <p>접수 후 2시간 내 전문가 직접 연락</p>
+                    <p>회사 현황 간단히 적어주시면 맞춤 분석</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>🎁 무료 제공</h4>
+                    <p>✅ 기업 현황 정밀 진단 (200만원 상당)</p>
+                    <p>✅ 최적 정책자금 매칭 (150만원 상당)</p>
+                    <p>✅ 전문가 신청서 작성 (300만원 상당)</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>⚡ 신청 후</h4>
+                    <p>🎯 1주일 내 현장 방문 보장</p>
+                    <p>🏆 85% 선정률로 확실한 성공</p>
+                    <p>📞 평균 3억원 확보</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #222; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 AI CAMP. All rights reserved.</p>
+            <p>정책자금 활용 전문 컨설팅 | 사업전환과 구조개선으로 위기를 기회로</p>
+            <p><a href="index.html" style="color: #667eea;">← 메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

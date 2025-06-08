@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매출증대 웹사이트 구축 - AI CAMP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-alt {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .contact-section {
+            background: #333;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">🏭 AI CAMP</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html#services">서비스</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>📈 AI로 구축하는 매출증대 웹사이트</h1>
+            <p>AI + 교육으로 완전 자립! 매출 250% 증가 보장!</p>
+            <a href="#contact" class="btn-primary">📞 무료 상담 신청</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">💔 웹사이트가 매출에 도움이 되지 않나요?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">😡</div>
+                    <h3>고객 문의 놓침 & 결제 이탈</h3>
+                    <p>❌ 매출 기회 상실 70%<br>❌ 회원 관리 부재로 재구매율 저조<br>❌ CRM 데이터 활용 미흡</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>복잡한 결제로 구매 포기</h3>
+                    <p>❌ 장바구니 이탈률 68%<br>❌ 콘텐츠 업데이트 어려움<br>❌ 외주 의존으로 월 100만원 추가 비용</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>충격적인 현실</h3>
+                    <p style="color: #e74c3c; font-weight: bold;">웹사이트 제작 후 콘텐츠 관리비로<br><strong>연간 1,200만원 추가 지출!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">🏆 보장된 성과 - 숫자로 검증된 결과</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number">250%</div><h4>매출 증가</h4><p>도입 후 평균</p></div>
+                <div class="stat-item"><div class="stat-number">300%</div><h4>전환율 향상</h4><p>1.2% → 4.8%</p></div>
+                <div class="stat-item"><div class="stat-number">353%</div><h4>재구매율 증가</h4><p>15% → 68%</p></div>
+                <div class="stat-item"><div class="stat-number">85%</div><h4>운영비 절감</h4><p>자동화 효과</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">⚡ 지금 바로 무료 상담 신청하세요!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">완전 자립으로 평생 외주비 제로의 자유를 누리세요!</p>
+            <div class="contact-grid">
+                <div class="contact-item"><h4>📞 전화상담</h4><p><strong>010-3475-1247</strong><br>평일 오전 9시~오후 6시</p></div>
+                <div class="contact-item"><h4>📧 이메일 문의</h4><p><strong>funding347@gmail.com</strong><br>24시간 접수 가능</p></div>
+                <div class="contact-item"><h4>🎁 무료 제공</h4><p>✅ AI 매출 진단 리포트<br>✅ 완전 자립 로드맵</p></div>
+                <div class="contact-item"><h4>⚡ 특별 혜택</h4><p>정가 1,800만원 → <strong>특가 1,200만원</strong></p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #222; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 AI CAMP. All rights reserved. | AI 기반 완전 자립형 웹사이트 구축 전문</p>
+            <p><a href="index.html" style="color: #667eea;">← 메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

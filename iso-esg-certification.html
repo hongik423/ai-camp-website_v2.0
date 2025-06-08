@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO·ESG 인증 전문 컨설팅 - AI CAMP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-alt {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .contact-section {
+            background: #333;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-item h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="color: white; text-decoration: none;">🏭 AI CAMP</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html#services">서비스</a></li>
+                <li><a href="#contact">연락처</a></li>
+                <li><a href="about.html">회사소개</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🏆 ISO·ESG 인증 전문 컨설팅</h1>
+            <p>글로벌 경쟁력 확보 | 96% 성공률 보장 | 6개월 완성</p>
+            <a href="#contact" class="btn-primary">📞 무료 상담 신청</a>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">😰 인증 취득이 어려우신가요?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>복잡한 인증 절차</h3>
+                    <p>800개 이상 점검항목과 방대한 문서화 작업으로 인한 혼란</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3>높은 비용 부담</h3>
+                    <p>500만원~3,000만원의 총 비용과 6개월~1년의 장기간 투자</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>거래 조건 압박</h3>
+                    <p>대기업 협력업체 선정 시 필수 조건화로 인한 압박</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">✨ AI CAMP이 완벽하게 해결해 드립니다!</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>맞춤형 인증 로드맵</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 기업 현황 정밀 진단 (96개 체크포인트)</li>
+                        <li>✅ 부족한 부분 명확 파악 및 우선순위 설정</li>
+                        <li>✅ 최단 경로 인증 로드맵 제시</li>
+                        <li>✅ 예상 기간 및 비용 정확 산출</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>체계적 시스템 구축</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ ISO 9001/14001/45001 통합 시스템</li>
+                        <li>✅ ESG 경영시스템 완벽 연동</li>
+                        <li>✅ 자동화된 문서 관리 시스템</li>
+                        <li>✅ 실무진 교육 및 내재화 완료</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>인증 심사 대응</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 인증기관 심사원 대응 전략</li>
+                        <li>✅ 모의심사를 통한 완벽 준비</li>
+                        <li>✅ 실시간 심사 동행 및 지원</li>
+                        <li>✅ 96% 성공률로 검증된 전문성</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>지속적 사후관리</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>✅ 연간 사후심사 완벽 대응</li>
+                        <li>✅ 3년 갱신 심사 사전 준비</li>
+                        <li>✅ 지속적 시스템 개선 지원</li>
+                        <li>✅ 24시간 전담 컨설턴트 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">📊 확실한 성과를 보장합니다</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">96%</div>
+                    <h4>인증 성공률</h4>
+                    <p>업계 최고 수준</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25%</div>
+                    <h4>매출 증가</h4>
+                    <p>인증 취득 후</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">300+</div>
+                    <h4>성공 사례</h4>
+                    <p>누적 인증 취득</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6개월</div>
+                    <h4>평균 기간</h4>
+                    <p>준비부터 취득까지</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">🏆 AI CAMP 인증 4단계 프로세스</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>현황 진단</h3>
+                    <p><strong>무료 제공</strong></p>
+                    <ul style="text-align: left; color: #666;">
+                        <li>기업 현황 및 준비도 정밀 분석</li>
+                        <li>갭 분석 및 인증 로드맵 제시</li>
+                        <li>예상 기간 및 비용 정확 산출</li>
+                        <li>맞춤형 추진 전략 수립</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>시스템 구축</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>경영시스템 설계 및 구축</li>
+                        <li>프로세스 문서화 완료</li>
+                        <li>임직원 교육 및 훈련</li>
+                        <li>시범 운영 및 개선</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>인증 취득</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>인증기관 심사 대응</li>
+                        <li>부적합 사항 즉시 개선</li>
+                        <li>인증서 취득 완료</li>
+                        <li>인증 성공 축하</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>사후 관리</h3>
+                    <ul style="text-align: left; color: #666;">
+                        <li>사후 심사 완벽 대응 지원</li>
+                        <li>시스템 지속 개선</li>
+                        <li>갱신 심사 사전 준비</li>
+                        <li>24시간 전담 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">💬 고객 성공 사례</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"6개월 만에 ISO 3개 동시 취득! 대기업 납품을 위해 ISO 인증이 필수였는데, AI CAMP 덕분에 9001, 14001, 45001을 동시에 취득했습니다. 취득 후 대기업 신규 거래가 3건이나 성사되어 매출이 40% 증가했습니다!"</p>
+                    <div class="testimonial-author">김○○ 대표 | 정밀기계 제조업 | 직원 85명</div>
+                </div>
+                <div class="testimonial">
+                    <p>"ESG 인증으로 해외 수출 3배 증가! 글로벌 바이어들이 ESG 인증을 요구하기 시작했는데, AI CAMP의 체계적 지원으로 성공적으로 취득했습니다. 이후 유럽 수출이 3배 증가했고, 새로운 시장 진출 기회도 많아졌습니다."</p>
+                    <div class="testimonial-author">박○○ 상무 | 전자부품 | 직원 120명</div>
+                </div>
+                <div class="testimonial">
+                    <p>"정부 입찰 성공률 90% 달성! ISO 인증 후 정부 입찰에서 가산점을 받아 성공률이 크게 향상되었습니다. 무엇보다 체계적인 품질 관리로 고객 만족도도 높아졌습니다."</p>
+                    <div class="testimonial-author">이○○ 팀장 | IT 서비스업 | 직원 45명</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">🎯 놓치면 후회하는 기회!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">인증 없이는 대기업 거래 기회 상실, 해외 수출 진출 제약</p>
+            <a href="#contact" class="btn-primary" style="background: white; color: #ff6b6b;">지금 바로 무료 상담 신청</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">📞 지금 바로 무료 상담 신청</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">96% 성공률로 안전한 인증 취득을 보장합니다</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>🔥 긴급 전화 상담</h4>
+                    <p><strong>010-3475-1247</strong></p>
+                    <p>평일 09:00-18:00</p>
+                    <p>ISO·ESG 전문 컨설턴트 직접 상담</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>📧 이메일 문의</h4>
+                    <p><strong>funding347@gmail.com</strong></p>
+                    <p>24시간 내 맞춤 제안서 발송</p>
+                    <p>회사 소개서 첨부 시 우선 검토</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>🎁 무료 제공</h4>
+                    <p>✅ 현황 진단 (300만원 상당)</p>
+                    <p>✅ 인증 로드맵</p>
+                    <p>✅ 예상 비용 산출</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>⚡ 신청 후</h4>
+                    <p>🎯 1주일 내 무료 진단 시작</p>
+                    <p>🏆 6개월 내 확실한 인증 취득</p>
+                    <p>📞 24시간 전담 컨설턴트 지원</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #222; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 AI CAMP. All rights reserved.</p>
+            <p>ISO·ESG 인증 전문 컨설팅 | 글로벌 경쟁력 확보</p>
+            <p><a href="index.html" style="color: #667eea;">← 메인으로 돌아가기</a></p>
+        </div>
+    </footer>
+</body>
+</html> 
